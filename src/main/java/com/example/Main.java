@@ -1,9 +1,15 @@
-import java.util.Arrays;
+package com.example;
+
 import java.util.Scanner;
 import java.util.Objects;
 //adding libraries
 //добавляем библиотеки
 public class Main {
+
+    //variable to change Player
+    //переменая для смены игрока
+    private static boolean bollPlayer = true;
+
     public static void main(String[] args) {
         //variable to end while loop
         //переменняая для окоечания цикла
@@ -17,10 +23,6 @@ public class Main {
                 {'b', ' ', ' ', ' '},
                 {'c',' ',' ',' '}
         };
-
-        //variable to change Player
-        //переменая для смены игрока
-        boolean bollPlayer = true;
 
         //gaming loop (main)
         //игровой массив (главный)
@@ -232,6 +234,9 @@ public class Main {
             default:
                 //if nothing matched  //если не один вариан не подойдёт
                 System.out.print("\nthere is no such option, choose letter (a-c) + number (1-3), in this form 'b2'.");
+
+                bollPlayer = !bollPlayer;
+
                 break;
         }
         //at the end we return from switch case coordinates
